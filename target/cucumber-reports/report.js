@@ -1,94 +1,277 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("authentification/Autentification.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("acceuil/Acceuil.feature");
 formatter.feature({
   "line": 2,
-  "name": "Authentification - OrangeHRM",
-  "description": "En tant que utilisateur je souhaite m authentifier",
-  "id": "authentification---orangehrm",
+  "name": "Acceuil-OrangeHRM",
+  "description": "En tant qui etilisateur orange e souhaite acceder au module Recruitment",
+  "id": "acceuil-orangehrm",
   "keyword": "Feature",
   "tags": [
     {
       "line": 1,
-      "name": "@authentification"
+      "name": "@acceuil"
     }
   ]
 });
 formatter.before({
-  "duration": 170600000,
-  "error_message": "java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method \u0027abstract java.util.List createArgs()\u0027 of abstract class org.openqa.selenium.remote.service.DriverService$Builder.\r\n\tat org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:444)\r\n\tat com.e2eTests.automation.util.ChromeDriverManager.startService(ChromeDriverManager.java:20)\r\n\tat com.e2eTests.automation.util.DriverManager.getDriver(DriverManager.java:22)\r\n\tat com.e2eTests.automation.util.Setup.setup(Setup.java:24)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\r\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\r\n\tat cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:202)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)\r\n",
-  "status": "failed"
+  "duration": 12372315600,
+  "status": "passed"
 });
-formatter.scenario({
-  "line": 6,
-  "name": "Authentification - OrangeHRM",
+formatter.background({
+  "line": 5,
+  "name": "",
   "description": "",
-  "id": "authentification---orangehrm;authentification---orangehrm",
-  "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "line": 5,
-      "name": "@authentification"
-    }
-  ]
+  "type": "background",
+  "keyword": "Background"
 });
 formatter.step({
-  "line": 7,
-  "name": "J ouvre lapplication orangeHRM",
+  "line": 6,
+  "name": "J me connecte lapplication orangeHRM",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 8,
-  "name": "Je saisie le login",
+  "line": 7,
+  "name": "Je saisie le login \"Admin\"",
   "keyword": "When "
 });
 formatter.step({
+  "line": 8,
+  "name": "Je saisie le mot de passe \"admin123\"",
+  "keyword": "And "
+});
+formatter.step({
   "line": 9,
-  "name": "Je saisie le mot de passe",
+  "name": "Je clique sur  login",
   "keyword": "And "
 });
 formatter.step({
   "line": 10,
-  "name": "Je clique sur le boutton login",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 11,
-  "name": "Je verifie le compte admin",
+  "name": "redirection ver  le compte admin",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "AuthentificationStepDefinition.jOuvreLapplicationOrangeHRM()"
+  "location": "AutentificationOutlineStepDefinition.jOuvreLapplicationOrangeHRM()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 7123051900,
+  "status": "passed"
 });
 formatter.match({
-  "location": "AuthentificationStepDefinition.jeSaisieLeLogin()"
+  "arguments": [
+    {
+      "val": "Admin",
+      "offset": 20
+    }
+  ],
+  "location": "AutentificationOutlineStepDefinition.jeSaisieLeLogin(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 1104486900,
+  "status": "passed"
 });
 formatter.match({
-  "location": "AuthentificationStepDefinition.jeSaisieLeMotDePasse()"
+  "arguments": [
+    {
+      "val": "admin123",
+      "offset": 27
+    }
+  ],
+  "location": "AutentificationOutlineStepDefinition.jeSaisieLeMotDePasse(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 341965400,
+  "status": "passed"
 });
 formatter.match({
-  "location": "AuthentificationStepDefinition.jeCliqueSurLeBouttonLogin()"
+  "location": "AutentificationOutlineStepDefinition.jeCliqueSurLeBouttonLogin()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 157544500,
+  "status": "passed"
 });
 formatter.match({
-  "location": "AuthentificationStepDefinition.jeVerifieLeCompteAdmin()"
+  "location": "AutentificationOutlineStepDefinition.jeVerifieLeCompteAdmin()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 1725302600,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 13,
+  "name": "Acceder au module Recruitment",
+  "description": "",
+  "id": "acceuil-orangehrm;acceder-au-module-recruitment",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 12,
+      "name": "@recruitment"
+    }
+  ]
+});
+formatter.step({
+  "line": 14,
+  "name": "je clique sur le module Recruitment",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 15,
+  "name": "je verifie l affichage de la page Recruitment \"Candidates\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "AcceuilStepDefinition.jeCliqueSurLeModuleRecruitment()"
+});
+formatter.result({
+  "duration": 1774728700,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Candidates",
+      "offset": 47
+    }
+  ],
+  "location": "AcceuilStepDefinition.jeVerifieLAffichageDeLaPageRecruitment(String)"
+});
+formatter.result({
+  "duration": 512585100,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 374400,
-  "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.getCurrentUrl()\" because \"com.e2eTests.automation.util.Setup.driver\" is null\r\n\tat com.e2eTests.automation.util.Setup.embeadScreenShot(Setup.java:36)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\r\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\r\n\tat cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)\r\n",
-  "status": "failed"
+  "duration": 2560422800,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 8673536000,
+  "status": "passed"
+});
+formatter.background({
+  "line": 5,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 6,
+  "name": "J me connecte lapplication orangeHRM",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Je saisie le login \"Admin\"",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 8,
+  "name": "Je saisie le mot de passe \"admin123\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 9,
+  "name": "Je clique sur  login",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 10,
+  "name": "redirection ver  le compte admin",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "AutentificationOutlineStepDefinition.jOuvreLapplicationOrangeHRM()"
+});
+formatter.result({
+  "duration": 5926772800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Admin",
+      "offset": 20
+    }
+  ],
+  "location": "AutentificationOutlineStepDefinition.jeSaisieLeLogin(String)"
+});
+formatter.result({
+  "duration": 1030515800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "admin123",
+      "offset": 27
+    }
+  ],
+  "location": "AutentificationOutlineStepDefinition.jeSaisieLeMotDePasse(String)"
+});
+formatter.result({
+  "duration": 333107400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "AutentificationOutlineStepDefinition.jeCliqueSurLeBouttonLogin()"
+});
+formatter.result({
+  "duration": 181583300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "AutentificationOutlineStepDefinition.jeVerifieLeCompteAdmin()"
+});
+formatter.result({
+  "duration": 1661769800,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 18,
+  "name": "Acceder au module PIM",
+  "description": "",
+  "id": "acceuil-orangehrm;acceder-au-module-pim",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 17,
+      "name": "@PIM"
+    }
+  ]
+});
+formatter.step({
+  "line": 19,
+  "name": "je clique sur le module PIM",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 20,
+  "name": "je verifie l affichage de la page PIM \"Configuration\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "AcceuilStepDefinition.jeCliqueSurLeModulePIM()"
+});
+formatter.result({
+  "duration": 1180988200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Configuration",
+      "offset": 39
+    }
+  ],
+  "location": "AcceuilStepDefinition.jeVerifieLAffichageDeLaPagePIM(String)"
+});
+formatter.result({
+  "duration": 496260400,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2234928100,
+  "status": "passed"
 });
 });

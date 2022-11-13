@@ -18,7 +18,6 @@ public class DriverManagerFactory {
 			break;
 		}
 		return driverManager;
+
 	}
 }
-
-

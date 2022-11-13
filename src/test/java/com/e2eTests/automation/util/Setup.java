@@ -10,36 +10,34 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
 public class Setup {
-	
+
 	public static WebDriver driver;
-	static DriverManager driverManager;
-	
+	static DriverManager driverManger;
+
 	@Before
-	/**
-	 * Call browser with the design pattern  factory navigator 
+	/*
+	 * Call browser with the design pattern factory navigator
 	 */
-	
 	public static void setup() {
-		driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
-		driver = driverManager.getDriver();
+		driverManger = DriverManagerFactory.getManager(DriverType.CHROME);
+		driver = driverManger.getDriver();
 	}
-	
-	
+
 	@After
-	/**
-	 * Embed a screenshot in test report if test is marked as fail 
-	 * 
+	/*
+	 * Embed a screenshot in test report if is test is marked as failed
 	 */
-	public void embeadScreenShot(Scenario scenario) {
-		if(scenario.isFailed()) {
+	public void embedScreenshot(Scenario scenario) {
+		if (scenario.isFailed()) {
 			try {
-				scenario.write("Current page URL is: " +driver.getCurrentUrl());
-				byte[] screenShoot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-				scenario.embed(screenShoot, "image/png");
-			} catch (WebDriverException somePlateformeDontSupportScreenShot) {
-				System.err.println(somePlateformeDontSupportScreenShot.getMessage());
+				scenario.write("current page url is " + driver.getCurrentUrl());
+				byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+				scenario.embed(screenshot, "image/png");
+			} catch (WebDriverException somPlateformDontSupportScreenshots) {
+				System.err.println(somPlateformDontSupportScreenshots.getMessage());
 			}
 		}
 		driver.quit();
+
 	}
 }
